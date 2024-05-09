@@ -1,43 +1,53 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossy Boxes - CaliDef: The Bootloot Empire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+    <div class="header">
+        <header>CaliDef: The Bootloot Empire</header>
+        <body>
+<button class="menu-button" onclick="toggleMenu()">Menu</button>
+<div id="sliding-Menu" class="sliding-menu">
+  <a href="cards" class="menu-option">Cards</a>
+  <a href="bootloot" class="menu-option">Bootloot</a>
+  <a href="full-sets" class="menu-option">Full Sets</a>
+  <a href="micro-cards" class="menu-option">Micro Cards</a>
+  <a href="custom-crafted-cards" class="menu-option">Custom Crafted Cards</a>
+</div>
+</div>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+    <div class="container">
+        <div class="glassmorphism glossy-box" onclick="addGlossyEffect(this)">Box 1</div>
+        <div class="glassmorphism glossy-box" onclick="addGlossyEffect(this)">Box 2</div>
+        <div class="glassmorphism glossy-box" onclick="addGlossyEffect(this)">Box 3</div>
+        <div class="glassmorphism glossy-box" onclick="addGlossyEffect(this)">Box 4</div>
+    </div>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    <div class="box" id="box1">
+        <button class="expand-btn" onclick="expandBox('box1')">Original Series Cards</button>
+        <div class="content" id="contentBox1" style="display:none;">
+            <button class="close-btn" onclick="closeBox('box1')">Close</button>
+            <!-- Spots for photos -->
+            <img src="path/to/photo1.jpg" alt="Item 1">
+            <img src="path/to/photo2.jpg" alt="Item 2">
+            <!-- Add more as needed -->
+        </div>
+    </div>
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    <div class="footer">
+    <a href="https://facebook.com/yourprofile" class="social-icon" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+</a>
+<a href="https://instagram.com/yourprofile" class="social-icon" target="_blank">
+    <i class="fab fa-instagram"></i>
+</a>
+    </div>
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    <script src="script.js"></script>
+</body>
+</html>
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
