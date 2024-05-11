@@ -28,19 +28,20 @@
 
 <div class="art-container">
     <div class="art-box" onclick="showInfo(1)">
-        <img src="artwork1.jpg" alt="Artwork 1">
+        <img src="https://ideogram.ai/api/images/direct/Hxw-Ja-0QH6l28gZO5pVSA.png" alt="Artwork 1">
+        <p>Sets available from Original Series 1 to Original Series 16</p>
     </div>
     <div class="art-box" onclick="showInfo(2)">
-        <img src="artwork2.jpg" alt="Artwork 2">
+        <img src="https://ideogram.ai/api/images/direct/rZKkNFQTSZ-f55XR_Jb8Eg.png" alt="Artwork 2">
     </div>
     <div class="art-box" onclick="showInfo(3)">
-        <img src="artwork3.jpg" alt="Artwork 3">
+        <img src="https://ideogram.ai/api/images/direct/Q6QqLiswQZet7a5XaEG0Bw.png" alt="Artwork 3">
     </div>
     <div class="art-box" onclick="showInfo(4)">
-        <img src="artwork4.jpg" alt="Artwork 4">
+        <img src="https://ideogram.ai/api/images/direct/VZNGm7nOS4aifo9br6mAcQ.png" alt="Artwork 4">
     </div>
     <div class="art-box" onclick="showInfo(5)">
-        <img src="artwork5.jpg" alt="Artwork 5">
+        <img src="https://ideogram.ai/api/images/direct/MMZdN3cITq2fPCDXxaOXYQ.png" alt="Artwork 5">
     </div>
     <div class="art-box" onclick="showInfo(6)">
         <img src="artwork6.jpg" alt="Artwork 6">
@@ -110,6 +111,46 @@
     <p>Condition: Excellent</p>
     <button onclick="hideInfo(8)">Close</button>
 </div>
+</div>
+document.addEventListener('DOMContentLoaded', function () {
+    const menu = document.querySelector('.menu');
+    const menuBtn = document.querySelector('.menu-btn');
+    const menuWidth = getComputedStyle(document.documentElement)
+                      .getPropertyValue('--menu-width');
+
+    <!-- Function to toggle the menu -->
+    function toggleMenu() {
+        if (menu.style.left === '0px') {
+            menu.style.left = '-' + menuWidth;
+        } else {
+            menu.style.left = '0px';
+        }
+    }
+
+    <!-- Event listener for the menu button -->
+    menuBtn.addEventListener('click', function () {
+        toggleMenu();
+    });
+
+    <!-- Close the menu if clicking outside of it -->
+    document.addEventListener('click', function (event) {
+        let targetElement = event.target; // clicked element
+
+        do {
+            if (targetElement === menu || targetElement === menuBtn) {
+                <!-- This is a click inside, do nothing, just return -->
+                return;
+            }
+            <!-- Go up the DOM -->
+            targetElement = targetElement.parentNode;
+        } while (targetElement);
+
+        <!-- This is a click outside, close the menu if it's open -->
+        if (menu.style.left === '0px') {
+            toggleMenu();
+        }
+    });
+});
 
 <script src="script.js"></script>
 
