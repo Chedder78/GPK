@@ -157,6 +157,12 @@ header {
     object-fit: cover;
     border-radius: 15px;
 }
+.art-box img {
+    width: 100%;
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover;  /* Cover the entire area of the container */
+    border-radius: 15px;  /* Maintain the styling as per your design */
+}
 
 .info-bar {
     display: none;
