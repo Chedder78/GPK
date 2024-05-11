@@ -207,9 +207,46 @@ button:hover {
         left: -100%;
     }
 }
-document.querySelectorAll('.ribbon-box').forEach(box => {
-    box.addEventListener('click', function() {
-        document.querySelectorAll('.ribbon-box').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-    });
-});
+/* Styling for the highlighted art box */
+.art-highlight img {
+    display: block;
+    width: 100%;
+    max-width: 800px; /* Adjust based on your layout needs */
+    margin: 0 auto;
+    border: 5px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Horizontal scrolling ribbon */
+.scrolling-ribbon {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.ribbon-box {
+    flex: 0 0 auto;
+    width: 150px; /* Small size by default */
+    transition: transform 0.3s ease;
+}
+
+.ribbon-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hover effect to expand images in the ribbon */
+.ribbon-box:hover {
+    transform: scale(1.5);
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* Highlight and focus styles using JavaScript */
+.ribbon-box.active {
+    border: 5px solid var(--text-color-light);
+    box-shadow: 0 0 20px var(--text-color-light);
+}
