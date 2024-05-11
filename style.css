@@ -132,8 +132,8 @@ header {
 }
 
 .art-box {
-    width: 250px;
-    height: 350px;
+    width: 450px;
+    height: 250px;
     margin: 20px;
     padding: 15px;
     background: var(--gradient-primary);
