@@ -71,3 +71,42 @@ window.onclick = function(event) {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const menu = document.querySelector('.menu');
+    const menuBtn = document.querySelector('.menu-btn');
+    const menuWidth = getComputedStyle(document.documentElement)
+                      .getPropertyValue('--menu-width');
+
+    // Function to toggle the menu
+    function toggleMenu() {
+        if (menu.style.left === '0px') {
+            menu.style.left = '-' + menuWidth;
+        } else {
+            menu.style.left = '0px';
+        }
+    }
+
+    // Event listener for the menu button
+    menuBtn.addEventListener('click', function () {
+        toggleMenu();
+    });
+
+    // Close the menu if clicking outside of it
+    document.addEventListener('click', function (event) {
+        let targetElement = event.target; // clicked element
+
+        do {
+            if (targetElement === menu || targetElement === menuBtn) {
+                // This is a click inside, do nothing, just return.
+                return;
+            }
+            // Go up the DOM
+            targetElement = targetElement.parentNode;
+        } while (targetElement);
+
+        // This is a click outside, close the menu if it's open.
+        if (menu.style.left === '0px') {
+            toggleMenu();
+        }
+    });
+});
