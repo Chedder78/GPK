@@ -30,7 +30,20 @@ header {
     z-index: 3;
     backdrop-filter: blur(10px);
 }
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: calc(100vw * 9 / 16); /* Dynamic calculation for 16:9 aspect ratio */
+    z-index: 1000; /* Ensure header stays on top of other content */
+    overflow: hidden;
+}
 
+img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio without CSS tricks */
+}
 .menu-btn {
     position: fixed;
     top: 10px;
