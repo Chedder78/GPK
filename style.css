@@ -59,7 +59,7 @@ header {
     background: var(--gradient-primary);
     overflow-y: auto;
     transition: 0.5s;
-    z-index: 2;
+    z-index: 1000;
     padding-top: 60px; /* Height of the header */
 }
 
@@ -250,7 +250,7 @@ button:hover {
     border: 5px solid var(--text-color-light);
     box-shadow: 0 0 20px var(--text-color-light);
 }
-.art-box {
+.art-box2 {
     position: relative;
     width: 250px;
     height: 350px;
@@ -265,14 +265,14 @@ button:hover {
     justify-content: space-between; /* Ensures the button aligns to the bottom */
 }
 
-.art-box img {
+.art-box2 img {
     width: 100%;
     height: auto; /* Adjust height automatically while keeping aspect ratio */
     object-fit: cover; /* Cover the area of the art-box without stretching */
     border-radius: 10px 10px 0 0; /* Rounded corners at the top only */
 }
 
-.art-box button {
+.art-box2 button {
     padding: 10px 20px;
     background-color: var(--primary-color);
     color: var(--text-color-light);
@@ -286,7 +286,7 @@ button:hover {
     width: 100%; /* Full width within the art-box */
 }
 
-.art-box button:hover {
+.art-box2 button:hover {
     background-color: #008B8B; /* Darker shade of cyan for hover effect */
     transform: scale(1.05); /* Slight increase in size on hover */
 }
