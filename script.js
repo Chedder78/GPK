@@ -79,10 +79,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to toggle the menu
     function toggleMenu() {
-        if (menu.style.left === '0px') {
+        if (menu.style.left === '-250px') {
             menu.style.left = '-' + menuWidth;
         } else {
-            menu.style.left = '0px';
+            menu.style.left = '-250px';
         }
     }
 
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } while (targetElement);
 
         // This is a click outside, close the menu if it's open.
-        if (menu.style.left === '0px') {
+        if (menu.style.left === '-250px') {
             toggleMenu();
         }
     });
