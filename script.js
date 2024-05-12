@@ -109,4 +109,23 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleMenu();
         }
     });
+});document.addEventListener('DOMContentLoaded', function() {
+    // Ensure the menu element and its width are correctly initialized
+    const menu = document.getElementById('sliding-menu'); // Adjust ID as necessary
+    const menuWidth = menu.offsetWidth; // This assumes the width is set and stable
+
+    // Function to toggle the menu
+    function toggleMenu() {
+        // Check if the menu is already shown (positioned at 0px)
+        if (menu.style.left === '0px') {
+            menu.style.left = '-' + menuWidth + 'px'; // Move it left by its own width
+        } else {
+            menu.style.left = '0px'; // Move it back to show it
+        }
+    }
+
+    // Event listener for menu toggle (assumes a button with class 'menu-button' exists)
+    const menuButton = document.querySelector('.menu-button');
+    menuButton.addEventListener('click', toggleMenu);
 });
+
