@@ -1,9 +1,86 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Page Title</title>
+        <title>custom cards</title>
     </head>
     <body>
-        
+        <h1>CaliDef</h1>
+        <h2>The Bootloot Empire</h2>
+        <style>
+        /* Horizontal scrolling ribbon */
+.scrolling-ribbon {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.ribbon-box {
+    flex: 0 0 auto;
+    width: 150px; /* Small size by default */
+    transition: transform 0.3s ease;
+}
+
+.ribbon-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hover effect to expand images in the ribbon */
+.ribbon-box:hover {
+    transform: scale(1.5);
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* Highlight and focus styles using JavaScript */
+.ribbon-box.active {
+    border: 5px solid var(--text-color-light);
+    box-shadow: 0 0 20px var(--text-color-light);
+}
+.art-box2 {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 20px;
+    padding: 15px;
+    background: var(--gradient-primary);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures the button aligns to the bottom */
+}
+
+.art-box2 img {
+    width: 100%;
+    height: auto; /* Adjust height automatically while keeping aspect ratio */
+    object-fit: cover; /* Cover the area of the art-box without stretching */
+    border-radius: 10px 10px 0 0; /* Rounded corners at the top only */
+}
+
+.art-box2 button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%; /* Full width within the art-box */
+}
+
+.art-box2 button:hover {
+    background-color: #008B8B; /* Darker shade of cyan for hover effect */
+    transform: scale(1.05); /* Slight increase in size on hover */
+}
+     </style>
+        <script src="script.js"></script>
     </body>
 </html>
