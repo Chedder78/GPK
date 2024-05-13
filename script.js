@@ -153,3 +153,18 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
+document.querySelectorAll('.info-box button').forEach(button => {
+    button.addEventListener('click', function() {
+        const modal = document.createElement('div');
+        modal.style.position = 'fixed';
+        modal.style.top = '50%';
+        modal.style.left = '50%';
+        modal.style.transform = 'translate(-50%, -50%)';
+        modal.style.border = '1px solid #ccc';
+        modal.style.padding = '20px';
+        modal.style.background = 'white';
+        modal.innerText = 'Detailed info here!';
+        document.body.appendChild(modal);
+        setTimeout(() => document.body.removeChild(modal), 3000); // Remove modal after 3 seconds
+    });
+});
