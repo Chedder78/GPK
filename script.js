@@ -129,3 +129,27 @@ document.addEventListener('DOMContentLoaded', function () {
     menuButton.addEventListener('click', toggleMenu);
 });
 
+  document.addEventListener("DOMContentLoaded", function() {
+    let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
+    if ("IntersectionObserver" in window) {
+      let observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            let img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove("lazyload");
+            observer.unobserve(img);
+          }
+        });
+      });
+      lazyImages.forEach(img => {
+        observer.observe(img);
+      });
+    } else {
+      // Fallback for browsers that don't support IntersectionObserver
+      lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+        img.classList.remove("lazyload");
+      });
+    }
+  });
