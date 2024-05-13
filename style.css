@@ -32,10 +32,10 @@ header {
 }
 header {
     position: fixed;
-    width: 1920px;
-    top: 10;
+    width: 1440px;
+    top: 0;
     left: 0;
-    height: 1080px; /* Dynamic calculation for 16:9 aspect ratio */
+    height: 720px; /* Dynamic calculation for 16:9 aspect ratio */
     z-index: 1000; /* Ensure header stays on top of other content */
     overflow: hidden;
 }
