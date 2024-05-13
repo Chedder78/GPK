@@ -3,16 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaliDef: The Bootloot Empire</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Interactive Content Boxes</title>
+    <style>
+        /* Defining CSS variables in the root */
+        :root {
+            --primary-color: #00FFFF; /* Cyan */
+            --background-dark: #111; /* Dark gray */
+            --text-color-light: #fff; /* White */
+            --menu-width: 300px; /* Width for menus, can be used if needed */
+            --gradient-primary: linear-gradient(to bottom right, #000033, #330033); /* Deep blue/purple gradient */
+        }
+
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--background-dark); /* Using dark background from variables */
+            color: var(--text-color-light); /* Ensuring text is light-colored */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Container for all boxes */
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Individual content box styling */
+        .info-box {
+            background: var(--gradient-primary); /* Using gradient for box background */
+            border: 2px solid var(--primary-color); /* Cyan border */
+            border-radius: 8px;
+            width: var(--menu-width); /* Width set by variable */
+            height: 300px;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Scrollable content area */
+        .content {
+            padding: 15px;
+            height: 80%;
+            overflow-y: auto;
+        }
+
+        /* Styling for the buttons at the bottom of each box */
+        button {
+            background-color: var(--primary-color); /* Cyan */
+            color: var(--text-color-light); /* White */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for buttons */
+        button:hover {
+            background-color: #008B8B; /* Darker shade of cyan for hover */
+        }
+    </style>
 </head>
-    <div class="header">
-        <header>CaliDef: The Bootloot Empire</header>
 <body>
-        <script src="script.js"></script>
+    <div class="box-container">
+        <div class="info-box">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            </div>
+            <button onclick="alert('More Info Here!')">More Info</button>
+        </div>
+        <!-- Repeat for each box with unique content as needed -->
+        <div class="info-box">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            </div>
+            <button onclick="alert('More Info Here!')">More Info</button>
+        </div>
+        <div class="info-box">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            </div>
+            <button onclick="alert('More Info Here!')">More Info</button>
+        </div>
+        <div class="info-box">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            </div>
+            <button onclick="alert('More Info Here!')">More Info</button>
+        </div>
     </div>
 </body>
-    </div>
 </html>
