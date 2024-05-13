@@ -39,6 +39,22 @@ header {
     z-index: 1000; /* Ensure header stays on top of other content */
     overflow: hidden;
 }
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%; /* Ensures the header is full width */
+    height: auto; /* Height auto for auto-adjustment */
+}
+
+.header-image {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
 
 img {
     width: 100%;
