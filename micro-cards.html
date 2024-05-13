@@ -73,11 +73,26 @@
             width: 100%;
             transition: background-color 0.3s;
         }
-
+            button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}        
+        
         /* Hover effect for buttons */
         button:hover {
             background-color: #008B8B; /* Darker shade of cyan for hover */
         }
+        @media (max-width: 600px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        width: 90%; /* Makes each box take almost the full width of the screen on small devices */
+    }
+}
+
     
     <div class="box-container">
         <div class="info-box">
@@ -106,7 +121,8 @@
             <button onclick="alert('More Info Here!')">More Info</button>
         </div>
     </div>
-        </style>
-<script src="script.js"></script>
+
+        <script src="script.js" defer></script>
+</style>
 </body>
 </html>
