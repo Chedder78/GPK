@@ -5,10 +5,9 @@ self.addEventListener('install', event => {
         caches.open('v1').then(cache => {
             console.log('Opened cache');
             return cache.addAll([
-                '/',
-                '/index.html',
-                '/css/style.css',
-                '/js/script.js',
+                'index.html',
+                'style.css',
+                'script.js',
                 '/images/logo.png'
             ]);
         }).then(() => {
