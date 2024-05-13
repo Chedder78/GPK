@@ -3,15 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Art Showcase</title>
-<link rel="stylesheet" href="style.css"> <!-- Ensure your CSS file is linked here -->
-<link rel="stylesheet" href="style2.css"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
+    <header class="fixed-header">
+        <img src="header_image.png" alt="Fixed Header Image">
+    </header>
+    <style>body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* high z-index to keep it above other content */
+}
+
+.art-highlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* take up most of the viewport height */
+    margin-top: 50px; /* adjust based on your fixed header's height */
+}
+
+.main-art-image {
+    width: 90%; /* scale image to take up most of the screen */
+    height: auto;
+    max-height: 100%;
+}
+
+.scrolling-ribbon {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    justify-content: center;
+}
+
+.ribbon-box {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.ribbon-box img {
+    width: 100px; /* fixed width or responsive based on your design */
+    height: auto;
+}
+
+.footer-home {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: #fff; /* choose a background that fits your design */
+}
+
+.footer-home button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+</style>
     <div class="art-highlight">
-        <img src="path_to_your_first_image.png" alt="First Art Image">
+        <img src="path_to_your_first_image.png" alt="First Art Image" class="main-art-image">
     </div>
     <div class="scrolling-ribbon">
-        <!-- Example images in the ribbon -->
         <div class="ribbon-box"><img src="image1.png" alt="Image 1"></div>
         <div class="ribbon-box"><img src="image2.png" alt="Image 2"></div>
         <div class="ribbon-box"><img src="image3.png" alt="Image 3"></div>
@@ -19,6 +82,10 @@
         <div class="ribbon-box"><img src="image5.png" alt="Image 5"></div>
         <div class="ribbon-box"><img src="image6.png" alt="Image 6"></div>
     </div>
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    <footer class="footer-home">
+        <button onclick="window.location.href='index.html';">Return to Home</button>
+    </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>
