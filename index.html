@@ -116,5 +116,20 @@
 
 <script src="script.js"></script>
 
+        <!-- Service worker registration code -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/GPK/service-worker.js')
+                    .then(function(registration) {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch(function(err) {
+                        console.log('Service Worker registration failed:', err);
+                    });
+            });
+        }
+    </script>
+
 </body>
 </html>
