@@ -31,17 +31,17 @@ header {
     backdrop-filter: blur(10px);
 }
 header {
-    position: fixed;
-    width: 1440px;
+    position: top;
+    width: 720px;
     top: 0;
     left: 0;
-    height: 720px; /* Dynamic calculation for 16:9 aspect ratio */
+    height: 480px; /* Dynamic calculation for 16:9 aspect ratio */
     z-index: 1000; /* Ensure header stays on top of other content */
     overflow: hidden;
 }
 
 header {
-    fixed: top;
+    position: relative;
     width: 720px; /* Full width of the container */
     height: 480px; /* Adjust height based on content */
     padding: 20px 0; /* Add some padding around the image */
