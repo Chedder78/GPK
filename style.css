@@ -32,31 +32,35 @@ header {
 }
 header {
     position: top;
-    width: 720px;
+    width: 100%px;
     top: 0;
     left: 0;
-    height: 480px; /* Dynamic calculation for 16:9 aspect ratio */
+    margin: 20px;
+    padding: 10px;
+    border: 2px cyan;
+    height: 400px; /* Dynamic calculation for 16:9 aspect ratio */
     z-index: 1000; /* Ensure header stays on top of other content */
     overflow: hidden;
 }
 
 header {
     position: flex;
-    width: 720px; /* Full width of the container */
-    height: 480px; /* Adjust height based on content */
-    padding: 20px 0; /* Add some padding around the image */
+    width: 100%; /* Full width of the container */
+    height: 400px; /* Adjust height based on content */
+    padding: 20px 20px; /* Add some padding around the image */
 }
 
 .header-image {
-    width: 50%px; /* Less than full width to ensure some margins */
-    height: 280px; /* Maintain aspect ratio */
+    width: auto; /* Less than full width to ensure some margins */
+    height: auto; /* Maintain aspect ratio */
     display: block; /* Remove default inline styles */
     margin: 20px; /* Center the image horizontally */
+    
 }
 
 img {
-    width: 720px;
-    height: 480px; /* Maintains aspect ratio without CSS tricks */
+    width: auto;
+    height: auto; /* Maintains aspect ratio without CSS tricks */
 }
 
 .footer {
