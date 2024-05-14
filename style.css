@@ -41,7 +41,7 @@ header {
 }
 
 header {
-    position: relative;
+    position: flex;
     width: 720px; /* Full width of the container */
     height: 480px; /* Adjust height based on content */
     padding: 20px 0; /* Add some padding around the image */
