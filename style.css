@@ -48,10 +48,10 @@ header {
 }
 
 .header-image {
-    width: 720px; /* Less than full width to ensure some margins */
-    height: 480px; /* Maintain aspect ratio */
+    width: 50%px; /* Less than full width to ensure some margins */
+    height: 280px; /* Maintain aspect ratio */
     display: block; /* Remove default inline styles */
-    margin: 10px; /* Center the image horizontally */
+    margin: 20px; /* Center the image horizontally */
 }
 
 img {
