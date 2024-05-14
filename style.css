@@ -41,21 +41,22 @@ header {
 }
 
 header {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Adjust height based on content */
+    fixed: top;
+    width: 720px; /* Full width of the container */
+    height: 480px; /* Adjust height based on content */
     padding: 20px 0; /* Add some padding around the image */
 }
 
 .header-image {
-    width: 90%; /* Less than full width to ensure some margins */
-    height: auto; /* Maintain aspect ratio */
+    width: 720px; /* Less than full width to ensure some margins */
+    height: 480px; /* Maintain aspect ratio */
     display: block; /* Remove default inline styles */
-    margin: 0 auto; /* Center the image horizontally */
+    margin: 10px; /* Center the image horizontally */
 }
 
 img {
-    width: 100%;
-    height: auto; /* Maintains aspect ratio without CSS tricks */
+    width: 720px;
+    height: 480px; /* Maintains aspect ratio without CSS tricks */
 }
 
 .footer {
