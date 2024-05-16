@@ -18,8 +18,7 @@
   background: rgba(255, 255, 255, 0.2); /* Adjust for translucency */
   border-radius: 20px; /* Rounded corners */
   backdrop-filter: blur(10px); /* Blur effect behind the window */
-  
-  /* Metal Frame as Accent Light */
+    /* Metal Frame as Accent Light */
   border: 2px solid rgba(255, 255, 255, 0.5); /* Simulating a light metal frame */
   box-shadow:
     0 0 10px 2px rgba(255, 255, 255, 0.7), /* Outer glow simulating the light */

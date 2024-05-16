@@ -3,51 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glossy Boxes - CaliDef: The Bootloot Empire</title>
+    <title>CaliDef: Bootloot Empire</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-    <div class="header">
-        <header>CaliDef: The Bootloot Empire</header>
-        <body>
-<button class="menu-button" onclick="toggleMenu()">Menu</button>
-<div id="sliding-Menu" class="sliding-menu">
-  <a href="cards" class="menu-option">Cards</a>
-  <a href="bootloot" class="menu-option">Bootloot</a>
-  <a href="full-sets" class="menu-option">Full Sets</a>
-  <a href="micro-cards" class="menu-option">Micro Cards</a>
-  <a href="custom-crafted-cards" class="menu-option">Custom Crafted Cards</a>
+<body>
+    <header>
+        <img src="https://ideogram.ai/api/images/direct/tjLeFGMSSKq7BAtRQchAiw.png" alt="Header Image">
+    </header>
+    <!-- Remaining content remains unchanged -->
+        <div></div>
+        <div></div>
+        <div></div>
+<div class="glass-pane">
+    <div class="glass-content">
+        Welcome to the Bootloot Empire.
+    </div>
+</div>
+<center>
+    <div class="art-container">
+    <div class="art-box" onclick="showInfo(1)">
+    <img src="https://ideogram.ai/api/images/direct/Ubw8LGhJRZOITXBmxZVfaQ.png" alt="Artwork 5">
+    <p>Sets available from Original Series 1 to Original Series 16</p>
+    <button onclick="location.href='/original_series/index1.html'">Original Series Sets</button>
+    </div>
+    </div>
+    <div class="art-box" onclick="showInfo(2)">
+    <img src="https://ideogram.ai/api/images/direct/Ubw8LGhJRZOITXBmxZVfaQ.png" alt="Artwork 2">
+    <button class="styled-button" onclick="location.href='/MTS.html'">Modern Themed Sets</button>
+    </div>
+    </div>
+    <div class="art-box" onclick="showInfo(3)">
+    <img src="https://ideogram.ai/api/images/direct/koFDNGjbTH6mN1ZySPm1Ew.png" alt="Artwork 3">     
+    <button onclick="location.href='/custom_cards.html'">Custom Cards</button>
+    </div>
+    </div>
+    <div class="art-box" onclick="showInfo(4)">
+    <img src="https://ideogram.ai/api/images/direct/tJWcmXG3Rj6-rEr5ZKa3UA.png" alt="Artwork 4">
+    <button onclick="location.href='/micro_cards.html'">Micro Cards</button>
+    </div>
+    </div>
+    <div class="art-box" onclick="showInfo(5)">
+    <img src="https://ideogram.ai/api/images/direct/OaLNP2c1TFy0md0wyteZzw.png" alt="Artwork 5">
+        <button onclick="location.href='/other_gpk_stuff.html'">Other GPK Stuff</button>
+    </div>
+    </div>
+    <div class="art-box" onclick="showInfo(6)">    
+    <img src="https://ideogram.ai/api/images/direct/pjbC7hxdSWuEHuHkE67e7g.png" alt="Artwork 6">
+    <button onclick="location.href='/social_network.html'">Check Us Out Across The Web</button>
+    </div>
+    </div>
+  <!--  <div class="art-box" onclick="showInfo(7)">
+    <img src="artwork7.jpg" alt="Artwork 7">
+    </div>
+    <div class="art-box" onclick="showInfo(8)">
+    <img src="artwork8.jpg" alt="Artwork 8">
+    </div>
+    </div>
+</center>
+<!-- Info bars for each artwork with dynamic content -->
+<div class="info-bar" data-series="1">
+    <p>Series Number: 1</p>
+    <p>Price: $100</p>
+    <p>Quantity: 10</p>
+    <p>Condition: New</p>
+    <button onclick="hideInfo(1)">Close</button>
+</div>
+<div class="info-bar" data-series="2">
+    <p>Series Number: 2</p>
+    <p>Price: $120</p>
+    <p>Quantity: 8</p>
+    <p>Condition: Like New</p>
+    <button onclick="hideInfo(2)">Close</button>
+</div>
+<div class="info-bar" data-series="3">
+    <p>Series Number: 3</p>
+    <p>Price: $90</p>
+    <p>Quantity: 5</p>
+    <p>Condition: Used</p>
+    <button onclick="hideInfo(3)">Close</button>
+</div>
+<div class="info-bar" data-series="4">
+    <p>Series Number: 4</p>
+    <p>Price: $110</p>
+    <p>Quantity: 3</p>
+    <p>Condition: Mint</p>
+    <button onclick="hideInfo(4)">Close</button>
+</div>
+<div class="info-bar" data-series="5">
+    <p>Series Number: 5</p>
+    <p>Price: $130</p>
+    <p>Quantity: 4</p>
+    <p>Condition: Like New</p>
+    <button onclick="hideInfo(5)">Close</button>
+</div>
+<div class="info-bar" data-series="6">
+    <p>Series Number: 6</p>
+    <p>Price: $110</p>
+    <p>Quantity: 7</p>
+    <p>Condition: Excellent</p>
+    <button onclick="hideInfo(6)">Close</button>
+</div>
+<div class="info-bar" data-series="7">
+    <p>Series Number: 7</p>
+    <p>Price: $95</p>
+    <p>Quantity: 3</p>
+    <p>Condition: New</p>
+    <button onclick="hideInfo(7)">Close</button>
+</div>
+<div class="info-bar" data-series="8">
+    <p>Series Number: 8</p>
+    <p>Price: $120</p>
+    <p>Quantity: 6</p>
+    <p>Condition: Excellent</p>
+    <button onclick="hideInfo(8)">Close</button>
 </div>
 </div>
 
-    <div class="container">
-        <div class="glassmorphism glossy-box" onclick="addGlossyEffect(this)">Box 1</div>
-        <div class="glassmorphism glossy-box" onclick="addGlossyEffect(this)">Box 2</div>
-        <div class="glassmorphism glossy-box" onclick="addGlossyEffect(this)">Box 3</div>
-        <div class="glassmorphism glossy-box" onclick="addGlossyEffect(this)">Box 4</div>
-    </div>
 
-    <div class="box" id="box1">
-        <button class="expand-btn" onclick="expandBox('box1')">Original Series Cards</button>
-        <div class="content" id="contentBox1" style="display:none;">
-            <button class="close-btn" onclick="closeBox('box1')">Close</button>
-            <!-- Spots for photos -->
-            <img src="path/to/photo1.jpg" alt="Item 1">
-            <img src="path/to/photo2.jpg" alt="Item 2">
-            <!-- Add more as needed -->
-        </div>
-    </div>
+<script src="script.js"></script>
 
-    <div class="footer">
-    <a href="https://facebook.com/yourprofile" class="social-icon" target="_blank">
-    <i class="fab fa-facebook-f"></i>
-</a>
-<a href="https://instagram.com/yourprofile" class="social-icon" target="_blank">
-    <i class="fab fa-instagram"></i>
-</a>
-    </div>
-
-    <script src="script.js"></script>
+        <!-- Service worker registration code -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/GPK/service-worker.js')
+                    .then(function(registration) {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch(function(err) {
+                        console.log('Service Worker registration failed:', err);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
-

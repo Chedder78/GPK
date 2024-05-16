@@ -1,0 +1,60 @@
+/* General styles for the container and layout */
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.display-box {
+    width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.display-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styles for the large box that appears on button click */
+.large-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 70%;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+}
+
+.scroll-container img {
+    max-width: 300px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.scroll-container p {
+    width: 300px; /* Same width as images to align text under each image */
+    margin: 0 10px;
+    text-align: center;
+}
