@@ -310,3 +310,21 @@ button:hover {
     background-color: #008B8B; /* Darker shade of cyan for hover effect */
     transform: scale(1.05); /* Slight increase in size on hover */
 }
+.styled-button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.styled-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
