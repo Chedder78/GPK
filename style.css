@@ -1,0 +1,123 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling: Set up font, background color, and smooth scrolling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Navigation bar: Sticky and transparent */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    padding: 1em 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1.5em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Hover effect for navigation links */
+}
+
+/* Parallax sections: Background and positioning */
+.parallax {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.parallax1 {
+    background-image: url('parallax1.jpg'); /* Replace with your image */
+}
+
+.parallax2 {
+    background-image: url('parallax2.jpg'); /* Replace with your image */
+}
+
+.parallax3 {
+    background-image: url('parallax3.jpg'); /* Replace with your image */
+}
+
+.parallax4 {
+    background-image: url('parallax4.jpg'); /* Replace with your image */
+}
+
+/* Glassmorphism effect on cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px); /* Glass blur effect */
+    padding: 2em;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Drop shadow for depth */
+}
+
+.glass-card h1, .glass-card h2 {
+    margin-bottom: 0.5em;
+    font-size: 2em;
+}
+
+.glass-card p {
+    font-size: 1.2em;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1.5em;
+    background-color: #333;
+    color: white;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Responsive design: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .glass-card {
+        max-width: 300px;
+        padding: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+}
