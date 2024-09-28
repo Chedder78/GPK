@@ -73,3 +73,21 @@ contactForm.addEventListener('submit', (e) => {
     alert(`Thank you, ${name}! Your message has been sent.`);
     contactForm.reset();
 });
+
+// Animate Social Icons on Scroll
+gsap.utils.toArray('.social-icons a').forEach(icon => {
+    gsap.fromTo(icon, 
+        { opacity: 0, y: 20 },
+        {
+            opacity: 1, 
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: icon,
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            }
+        }
+    );
+});
