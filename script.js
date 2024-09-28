@@ -36,11 +36,9 @@ gsap.utils.toArray('.glass-card').forEach(card => {
                 start: "top 80%",
                 toggleActions: "play none none reverse"
             }
-        }
-    );
-});
-
-// Parallax Effect using GSAP
+        });
+   
+    // Parallax Effect using GSAP
 gsap.utils.toArray('.parallax').forEach(section => {
     gsap.to(section, {
         backgroundPositionY: "20%",
@@ -52,8 +50,7 @@ gsap.utils.toArray('.parallax').forEach(section => {
             end: "bottom top"
         }
     });
-});
-
+    
 // Interactive Contact Form Submission
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', (e) => {
