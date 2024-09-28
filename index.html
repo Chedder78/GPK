@@ -3,135 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaliDef: Bootloot Empire</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Parallax & Glassmorphism Webpage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="https://ideogram.ai/api/images/direct/tjLeFGMSSKq7BAtRQchAiw.png" alt="Header Image">
-    </header>
-    <!-- Remaining content remains unchanged -->
-        <div></div>
-        <div></div>
-        <div></div>
-<div class="glass-pane">
-    <div class="glass-content">
-        Welcome to the Bootloot Empire.
-    </div>
-</div>
-<center>
-    <div class="art-container">
-    <div class="art-box" onclick="showInfo(1)">
-    <img src="https://ideogram.ai/api/images/direct/MMZdN3cITq2fPCDXxaOXYQ.png" alt="Artwork 5">
-    <p>Sets available from Original Series 1 to Original Series 16</p>
-    <button onclick="location.href='original_series_sets.html'">Original Series Sets</button>
-    </div>
-    </div>
-    <div class="art-box" onclick="showInfo(2)">
-    <img src="https://ideogram.ai/api/images/direct/pK0uBrIIQ96_ZdQNbu_8tg.png" alt="Artwork 2">
-    <button onclick="location.href='modern_themed_sets.html'">Modern Themed Sets</button>
-    </div>
-    </div>
-    <div class="art-box" onclick="showInfo(3)">
-    <img src="https://ideogram.ai/api/images/direct/_4GeFpiTQzWpPHZEyvjUwA.png" alt="Artwork 3">     
-    <button onclick="location.href='custom_crafted_cards.html'">Custom Crafted Cards</button>
-    </div>
-    </div>
-    <div class="art-box" onclick="showInfo(4)">
-    <img src="https://ideogram.ai/api/images/direct/OfgoLMGQTPuIp9wtE4mAbQ.png" alt="Artwork 4">
-    <button onclick="location.href='micro_cards.html'">Micro Cards</button>
-    </div>
-    <div class="art-box" onclick="showInfo(5)">
-    <img src="https://ideogram.ai/api/images/direct/irdEsiusQwmSeZsffcn1Tg.png" alt="Artwork 5">
-    <button onclick="location.href='other_gpk_stuff.html'">Other GPK Stuff</button>
-    </div>
-    <div class="art-box" onclick="showInfo(6)">    
-    <img src="https://ideogram.ai/api/images/direct/_S1WCBxvSQG6k6XKxwtO5g.png" alt="Artwork 6">
-    <button onclick="location.href='social_networks.html'">Social Network Portal</button>
-    </div>
-   <!-- <div class="art-box" onclick="showInfo(7)">
-    <img src="artwork7.jpg" alt="Artwork 7">
-    </div>
-    <div class="art-box" onclick="showInfo(8)">
-    <img src="artwork8.jpg" alt="Artwork 8">
-    </div>
-    </div>
-</center>
-<!-- Info bars for each artwork with dynamic content -->
-<div class="info-bar" data-series="1">
-    <p>Series Number: 1</p>
-    <p>Price: $100</p>
-    <p>Quantity: 10</p>
-    <p>Condition: New</p>
-    <button onclick="hideInfo(1)">Close</button>
-</div>
-<div class="info-bar" data-series="2">
-    <p>Series Number: 2</p>
-    <p>Price: $120</p>
-    <p>Quantity: 8</p>
-    <p>Condition: Like New</p>
-    <button onclick="hideInfo(2)">Close</button>
-</div>
-<div class="info-bar" data-series="3">
-    <p>Series Number: 3</p>
-    <p>Price: $90</p>
-    <p>Quantity: 5</p>
-    <p>Condition: Used</p>
-    <button onclick="hideInfo(3)">Close</button>
-</div>
-<div class="info-bar" data-series="4">
-    <p>Series Number: 4</p>
-    <p>Price: $110</p>
-    <p>Quantity: 3</p>
-    <p>Condition: Mint</p>
-    <button onclick="hideInfo(4)">Close</button>
-</div>
-<div class="info-bar" data-series="5">
-    <p>Series Number: 5</p>
-    <p>Price: $130</p>
-    <p>Quantity: 4</p>
-    <p>Condition: Like New</p>
-    <button onclick="hideInfo(5)">Close</button>
-</div>
-<div class="info-bar" data-series="6">
-    <p>Series Number: 6</p>
-    <p>Price: $110</p>
-    <p>Quantity: 7</p>
-    <p>Condition: Excellent</p>
-    <button onclick="hideInfo(6)">Close</button>
-</div>
-<div class="info-bar" data-series="7">
-    <p>Series Number: 7</p>
-    <p>Price: $95</p>
-    <p>Quantity: 3</p>
-    <p>Condition: New</p>
-    <button onclick="hideInfo(7)">Close</button>
-</div>
-<div class="info-bar" data-series="8">
-    <p>Series Number: 8</p>
-    <p>Price: $120</p>
-    <p>Quantity: 6</p>
-    <p>Condition: Excellent</p>
-    <button onclick="hideInfo(8)">Close</button>
-</div>
-</div>
 
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">About</a></li>
+            <li><a href="#section3">Services</a></li>
+            <li><a href="#section4">Contact</a></li>
+        </ul>
+    </nav>
 
-<script src="script.js"></script>
+    <!-- Hero Section (Parallax 1) -->
+    <section id="section1" class="parallax parallax1">
+        <div class="glass-card">
+            <h1>Welcome to Our Site</h1>
+            <p>Your journey to modern web design starts here.</p>
+        </div>
+    </section>
 
-        <!-- Service worker registration code -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/GPK/service-worker.js')
-                    .then(function(registration) {
-                        console.log('Service Worker registered with scope:', registration.scope);
-                    })
-                    .catch(function(err) {
-                        console.log('Service Worker registration failed:', err);
-                    });
-            });
-        }
-    </script>
+    <!-- About Section (Parallax 2) -->
+    <section id="section2" class="parallax parallax2">
+        <div class="glass-card">
+            <h2>About Us</h2>
+            <p>We specialize in creating beautiful and interactive web experiences using the latest trends in design.</p>
+        </div>
+    </section>
+
+    <!-- Services Section (Parallax 3) -->
+    <section id="section3" class="parallax parallax3">
+        <div class="glass-card">
+            <h2>Our Services</h2>
+            <p>From custom web development to design consultation, we bring your ideas to life with stunning visuals.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section (Parallax 4) -->
+    <section id="section4" class="parallax parallax4">
+        <div class="glass-card">
+            <h2>Contact Us</h2>
+            <p>Have a project in mind? Let's discuss how we can work together to create something amazing!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
